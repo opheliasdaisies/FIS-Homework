@@ -6,7 +6,7 @@ def number_guesser
 		guess = gets.chomp.to_i
 		diff = random - guess
 		if guess == random
-			puts "Congratulations! That was the right number! Do you want to play again? Yes or no?"
+			puts "Congratulations! #{guess} was the right number! Do you want to play again? Yes or no?"
 			play_again = gets.chomp.downcase
 			if play_again == "yes"
 				number_guesser
@@ -17,11 +17,13 @@ def number_guesser
 			end
 			break
 		elsif guess > random
-			puts "Sorry, that number is too high. I was guessing #{random}."
+			puts "Sorry, that number is too high."
 		else
-			puts "Sorry, that number is too low. I was guessing #{random}."
+			puts "Sorry, that number is too low."
 		end
-		puts diff.abs < last_diff ? "You're getting warmer!" : "You're getting colder."
+		if last_diff != 0
+			puts diff.abs < last_diff ? "You're getting warmer!" : "You're getting colder."
+		end
 		puts "Guess again!"
 		last_diff = diff.abs
 	end
