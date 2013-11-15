@@ -1,8 +1,8 @@
 def number_guesser
 	puts "Guess a number between 0 and 100."
+	random = rand(1..100)
 	loop do 
 		guess = gets.chomp.to_i
-		random = rand(1..100)
 		if guess == random
 			puts "Congratulations! That was the right number!"
 			break
