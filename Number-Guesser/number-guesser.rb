@@ -7,10 +7,11 @@ def number_guesser
 			puts "Congratulations! That was the right number!"
 			break
 		elsif guess > random
-			puts "Sorry, that number is too high. I was guessing #{random}. Guess again!"
+			puts "Sorry, that number is too high. I was guessing #{random}."
 		else
-			puts "Sorry, that number is too low. I was guessing #{random}. Guess again!"
+			puts "Sorry, that number is too low. I was guessing #{random}."
 		end
+		puts "Guess again!"
 	end
 end
 
