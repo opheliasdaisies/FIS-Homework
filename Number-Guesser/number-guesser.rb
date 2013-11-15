@@ -4,7 +4,15 @@ def number_guesser
 	loop do 
 		guess = gets.chomp.to_i
 		if guess == random
-			puts "Congratulations! That was the right number!"
+			puts "Congratulations! That was the right number! Do you want to play again? Yes or no?"
+			play_again = gets.chomp.downcase
+			if play_again == "yes"
+				number_guesser
+			elsif play_again == "no"
+				puts "Sorry to hear that! Come back soon! I get lonely easily."
+			else
+				puts "I don't understand that. I don't want to play with you anymore."
+			end
 			break
 		elsif guess > random
 			puts "Sorry, that number is too high. I was guessing #{random}."
