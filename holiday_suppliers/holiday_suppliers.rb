@@ -27,6 +27,26 @@ holiday_supplies[:spring][:memorial_day] << "Flags"
 holiday_supplies[:fall][:halloween] = ["Candy", "Pumpkins", "Costumes"]
 
 #Write a method to collect all Winter supplies from all the winter holidays. ex: winter_suppliers(holiday_supplies) #=> ["Lights", "Wreath", etc]
-
+def winter_suppliers(holiday_supplies)
+  winter_supplies = []
+  holiday_supplies[:winter].each do |holiday, supplies|
+    supplies.each do |supply|
+      winter_supplies << supply
+    end
+  end
+  winter_supplies
+end
+p winter_suppliers(holiday_supplies)
 
 #Write a loop to list out all the supplies you have for each holiday and the season.
+
+# Output:
+
+# Winter:
+#   Christmas: Lights and Wreath
+#   New Years: Party Hats
+
+
+
+
+#Write a method to collect all holidays with BBQ.
