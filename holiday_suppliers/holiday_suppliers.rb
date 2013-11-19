@@ -13,3 +13,5 @@ holiday_supplies = {
     :memorial_day => ["BBQ"]
   }
 }
+
+holiday_supplies[:summer][:forth_of_july][1]
