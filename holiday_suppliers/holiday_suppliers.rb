@@ -24,7 +24,9 @@ holiday_supplies[:winter][:new_years] << "Confetti"
 holiday_supplies[:spring][:memorial_day] << "Flags"
 
 #Add a new holiday to any season with supplies.
+holiday_supplies[:fall][:halloween] = ["Candy", "Pumpkins", "Costumes"]
 
 #Write a method to collect all Winter supplies from all the winter holidays. ex: winter_suppliers(holiday_supplies) #=> ["Lights", "Wreath", etc]
+
 
 #Write a loop to list out all the supplies you have for each holiday and the season.
