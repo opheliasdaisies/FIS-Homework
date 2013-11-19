@@ -36,7 +36,7 @@ def winter_suppliers(holiday_supplies)
   end
   winter_supplies
 end
-p winter_suppliers(holiday_supplies)
+winter_suppliers(holiday_supplies)
 
 #Write a loop to list out all the supplies you have for each holiday and the season.
 
@@ -50,3 +50,15 @@ p winter_suppliers(holiday_supplies)
 
 
 #Write a method to collect all holidays with BBQ.
+def holidays_with_bbqs(holiday_supplies)
+  bbq_holidays = []
+  holiday_supplies.each do |season, hash|
+    hash.each do |holiday, array|
+      if array.include?("BBQ")
+        bbq_holidays << holiday
+      end
+    end
+  end
+  bbq_holidays
+end
+holidays_with_bbqs(holiday_supplies)
