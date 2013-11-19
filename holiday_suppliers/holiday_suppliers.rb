@@ -45,9 +45,17 @@ winter_suppliers(holiday_supplies)
 # Winter:
 #   Christmas: Lights and Wreath
 #   New Years: Party Hats
-
-
-
+holiday_supplies.each do |season, hash|
+  puts "#{season.to_s.capitalize}:"
+  hash.each do |holiday, supplies|
+    holiday_array = holiday.to_s.split("_")
+    holiday_array.each do |word|
+      word.capitalize!
+    end
+    holiday = holiday_array.join(" ")
+    puts "   #{holiday}: #{supplies.join(", ")}"
+  end
+end
 
 #Write a method to collect all holidays with BBQ.
 def holidays_with_bbqs(holiday_supplies)
