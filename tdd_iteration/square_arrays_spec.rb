@@ -7,4 +7,7 @@ describe "#square_array" do
 	it "should return [1, 4, 9, 16, 25, 36, 49] if passed [1, 2, 3, 4, 5, 6, 7]" do
 		expect(square_array([1, 2, 3, 4, 5, 6, 7])).to eq([1, 4, 9, 16, 25, 36, 49])
 	end
+	it "should return an empty array if an empty array is passed in" do
+		expect(square_array([])).to eq([])
+	end
 end
