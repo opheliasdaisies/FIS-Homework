@@ -3,23 +3,13 @@
 # part II. reimplement this method as an instance method on the array class
 
 def maximum(arr)
-	if arr.length == 0
-		[]
-	else
-		arr.sort!
-		arr.last
-	end
+	arr.length == 0 ? [] : arr.sort.last
 end
 
 
 #now rewrite this as a method on the array class
 class Array
   def maximum
-	if self.length == 0
-		[]
-	else
-		self.sort!
-		self.last
-	end
+	self.length == 0 ? [] : self.sort.last
   end
 end
