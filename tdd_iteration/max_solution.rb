@@ -12,10 +12,14 @@ def maximum(arr)
 end
 
 
-# now rewrite this as a method on the array class
-# class Array
-#   def maximum
-# 	#arr.sort!
-# 	#arr.last
-#   end
-# end
+#now rewrite this as a method on the array class
+class Array
+  def maximum
+	if self.length == 0
+		[]
+	else
+		self.sort!
+		self.last
+	end
+  end
+end
