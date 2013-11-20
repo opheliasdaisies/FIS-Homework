@@ -3,7 +3,8 @@
 # part II. reimplement this method as an instance method on the array class
 
 def maximum(arr)
-
+	arr.sort!
+	arr.last
 end
 
 
