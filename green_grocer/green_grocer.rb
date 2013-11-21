@@ -36,36 +36,29 @@ def consolidate(cart)
   new_cart = []
   cart.each do |item|
     #{"BEETS +> {:price =>, :clearance =>"}}
-    item.each do |name, value|
-      if new_cart.include?([name])
-        index = new_cart.index(item)
-        new_cart[index][:count] += 1
-      else
-
-        new_cart << item 
-        new_cart[index][:count] = 1
-      
-      # if new_cart[index][:count] >= 1
-        
-      # else
-      #   new_cart[index][:count] = 1
-      end
+    item[:count] ||= 1
+    if new_cart.include? item
+      index = new_cart.index(item)
+      new_cart[index][:count] += 1
+    else
+      new_cart << item
     end
   end
+  new_cart
 end
 
-# cart = [{"BEETS"=>{:price=>2.50, :clearance=>false}},
-# 	{"KALE"=>{:price=>3.00, :clearance=>false}},
-#    # :count => 1},
-# 	{"BLACK_BEANS"=>{:price=>2.50, :clearance=>false}},
-# 	{"BEETS"=>{:price=>2.50, :clearance=>false}},
-# 	{"KALE"=>{:price=>3.00, :clearance=>false}},
-# 	{"KALE"=>{:price=>3.00, :clearance=>false}},
-# 	{"ALMONDS"=>{:price=>9.00, :clearance=>false}},
-# 	{"AVOCADO"=>{:price=>3.00, :clearance=>false}},
-# 	{"CHEESE"=>{:price=>6.50, :clearance=>false}}]
+cart = [{"BEETS"=>{:price=>2.50, :clearance=>false}},
+	{"KALE"=>{:price=>3.00, :clearance=>false}},
+   # :count => 1},
+	{"BLACK_BEANS"=>{:price=>2.50, :clearance=>false}},
+	{"BEETS"=>{:price=>2.50, :clearance=>false}},
+	{"KALE"=>{:price=>3.00, :clearance=>false}},
+	{"KALE"=>{:price=>3.00, :clearance=>false}},
+	{"ALMONDS"=>{:price=>9.00, :clearance=>false}},
+	{"AVOCADO"=>{:price=>3.00, :clearance=>false}},
+	{"CHEESE"=>{:price=>6.50, :clearance=>false}}]
 
-# puts consolidate cart
+p consolidate cart
 #the cart is currently an array of individual items, translate it into a hash that includes the counts for each item
   # For example if your cart was [  {"AVOCADO" => {:price => 3.00, :clearance => true}}, {"AVOCADO" => {:price => 3.00, :clearance => true}}]
   # it would become {"AVOCADO" => {:price => 3.00, :clearance => true}, :count => 2}
