@@ -8,3 +8,9 @@ describe "#starts_with_r" do
 		expect(starts_with_r(["python", "rspec", "rails"])).to eq(false)
 	end
 end
+
+describe "#capt_planet_new" do
+	it "should return all the elements that contain the letter 'a'" do
+ 		expect(capt_planet_new(["earth", "fire", "wind", "water", "heart"])).to eq(["earth", "water", "heart"])
+	end
+end
