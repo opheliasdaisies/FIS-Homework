@@ -36,6 +36,17 @@ end
 # Identify the first element in the stuff array that begins with the letters "wa".
 #   stuff = ["candy", :pepper, "wall", :ball, "wacky"]
 
+def begins_wa(array)
+	wa_word = ""
+	array.each do |word|
+		if word[0] == "w" && word[1] == "a"
+			wa_word = word
+			break
+		end
+	end
+	wa_word
+end
+
 # Identify all the elements in the stuff array that begins with the letters "wa".
 #   stuff = ["candy", :pepper, "wall", :ball, "wacky"]
 
