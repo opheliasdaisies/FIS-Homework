@@ -14,3 +14,9 @@ describe "#capt_planet_new" do
  		expect(capt_planet_new(["earth", "fire", "wind", "water", "heart"])).to eq(["earth", "water", "heart"])
 	end
 end
+
+describe "#begins_wa" do
+	it "should return the first element that begins with the letters 'wa'" do
+		expect(begins_wa(["candy", :pepper, "wall", :ball, "wacky"])).to eq("wall")
+	end
+end
