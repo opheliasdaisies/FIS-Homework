@@ -9,8 +9,17 @@
 # Return true if every element of the tools array starts with an "r" and false otherwise.
 #   tools = ["ruby", "rspec", "rails"]
 
-def starts_with_r
-
+def starts_with_r(array)
+	value = true
+	array.each do |word|
+		if word[0] == "r"
+			value = true
+		else
+			value = false
+			break
+		end
+	end
+	value
 end
 
 # Create a new array from the captain_planet array with all the elements that contain the letter "a".  
