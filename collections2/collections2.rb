@@ -28,9 +28,7 @@ end
 def capt_planet_new(array)
 	new_array = []
 	array.each do |word|
-		if word.include?("a")
-			new_array << word
-		end
+		new_array << word if word.include?("a")
 	end
 	new_array
 end
