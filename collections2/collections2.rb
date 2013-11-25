@@ -25,6 +25,16 @@ end
 # Create a new array from the captain_planet array with all the elements that contain the letter "a".  
 #   captain_planet = ["earth", "fire", "wind", "water", "heart"]
 
+def capt_planet_new(array)
+	new_array = []
+	array.each do |word|
+		if word.include?("a")
+			new_array << word
+		end
+	end
+	new_array
+end
+
 # Identify the first element in the stuff array that begins with the letters "wa".
 #   stuff = ["candy", :pepper, "wall", :ball, "wacky"]
 
