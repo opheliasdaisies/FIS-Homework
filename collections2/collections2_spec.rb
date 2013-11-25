@@ -26,3 +26,9 @@ describe "#wa_all" do
 		expect(wa_all(["candy", :pepper, "wall", :ball, "wacky"])).to eq(["wall", "wacky"])
 	end
 end
+
+describe "#strings_only" do
+	it "should return only the strings in an array" do
+		expect(strings_only(["one", ["two"], :three])).to eq(["one"])
+	end
+end

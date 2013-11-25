@@ -63,6 +63,16 @@ end
 # Remove anything that's not a string from an array.
 # Hint: Use the method "class"  "blake".class
 
+def strings_only(array)
+	strings = []
+	array.each do |word|
+		if word.class == String
+			strings << word
+		end
+	end
+	strings
+end
+
 # Change the third letter of all strings in an array.  Your solution should work for arrays that have mixed types of objects inside it.
 
 # Count the number of times each word appears in a string and store that data in a hash that has the word as the key and the count as the value.
