@@ -20,3 +20,9 @@ describe "#begins_wa" do
 		expect(begins_wa(["candy", :pepper, "wall", :ball, "wacky"])).to eq("wall")
 	end
 end
+
+describe "#wa_all" do
+	it "should return all the elements that begin with the letter 'wa'" do
+		expect(wa_all(["candy", :pepper, "wall", :ball, "wacky"])).to eq(["wall", "wacky"])
+	end
+end

@@ -50,6 +50,16 @@ end
 # Identify all the elements in the stuff array that begins with the letters "wa".
 #   stuff = ["candy", :pepper, "wall", :ball, "wacky"]
 
+def wa_all(array)
+	wa_words = []
+	array.each do |word|
+		if word[0] == "w" && word[1] == "a"
+			wa_words << word
+		end
+	end
+	wa_words
+end
+
 # Remove anything that's not a string from an array.
 # Hint: Use the method "class"  "blake".class
 
