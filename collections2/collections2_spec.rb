@@ -32,3 +32,9 @@ describe "#strings_only" do
 		expect(strings_only(["one", ["two"], :three])).to eq(["one"])
 	end
 end
+
+describe "#third_letter" do
+	it "should return a changed array with the third letter of all strings changed" do
+		expect(third_letter(["item", :thing, "stuff"])).to eq(["it$m", :thing, "st$ff"])
+	end
+end
